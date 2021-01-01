@@ -15,7 +15,10 @@ export default new Router ({
 		{
 			path: '/pokemon/:id',
 			name: 'pokemon',
-			component: Pokemon
+			component: Pokemon,
+			props: (route) => ({
+				poke_url: Object(route.params)
+			})
 		}
 	],
 	mode: 'history'
